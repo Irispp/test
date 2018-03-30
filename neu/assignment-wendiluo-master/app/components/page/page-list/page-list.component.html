@@ -1,0 +1,58 @@
+
+<body style="height: 100%;">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    <!--chevron-left-->
+    <p class="navbar-text pull-left">
+      <a routerLink= "/user/:uid/website" class="navbar-link">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+    </p>
+
+
+
+    <div class="navbar-header pull-left">
+      <a class="navbar-brand thick" href = "widget-list.html">
+        Pages
+      </a>
+    </div>
+
+    <!--plus-->
+    <p class="navbar-text pull-right">
+      <a routerLink="/user/:uid/website/:wid/page/new" class="navbar-link">
+        <span class="glyphicon glyphicon-plus"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>
+
+<div class="container-fluid" style="height: 100%;">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <div class="row" *ngFor="let page of pages">
+        <div class="col-xs-6"><a [routerLink]="['/user/:uid/website/:wid/page/:pid/widget']">{{page.name}}</a ></div>
+        <div class="col-xs-6">
+          <a [routerLink]="['/user/:uid/website/:wid/page/:pid']" class="pull-right">
+            <span class="glyphicon glyphicon-cog"></span>
+          </a >
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- Footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <p class="navbar-text pull-right">
+      <a routerLink="/user/:uid ">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>
+</body>
+

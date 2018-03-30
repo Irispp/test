@@ -1,0 +1,68 @@
+
+<body style="height: 100%">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+
+    <!--chevron-left-->
+    <p class="navbar-text pull-left">
+      <a routerLink= "/user/:uid/website/:wid/page/:pid/widget" class="navbar-link">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+    </p>
+
+
+
+    <div class="navbar-header pull-left">
+      <a class="navbar-brand thick">
+        Widget Edit
+      </a>
+    </div>
+
+    <!--tick-->
+    <p class="navbar-text pull-right">
+      <a routerLink="/user/:uid/website/:wid/page/:pid/widget " class="navbar-link">
+        <span class="glyphicon glyphicon-ok"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>
+<div class="container">
+
+  <label>Name</label>
+  <input type="text"
+         class="form-control"/>
+
+  <label>Text</label>
+  <input placeholder="US Senate Reaches Compromises on Emerging "
+         type="text"
+         class="form-control"/>
+
+  <label>Size</label>
+  <input placeholder="3"
+         type="text"
+         class="form-control"/>
+
+  <a class="btn btn-danger btn-block "
+     routerLink="/user/:uid/website/:wid/page/:pid/widget " >
+    Delete</a>
+
+
+</div>
+<!-- Footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <p class="navbar-text pull-right">
+      <a routerLink="/user/:uid">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>
+</body>
+
+
+
