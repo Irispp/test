@@ -1,0 +1,108 @@
+
+<body style="height: 100%;">
+<nav class="navbar navbar-default navbar-fixed-top navbar-blue">
+  <div class="container-fluid">
+
+
+
+
+    <!--chevron-left-->
+    <p class="navbar-text pull-left">
+      <a routerLink= "website" class="navbar-link">
+        <span class="glyphicon glyphicon-chevron-left navbar-white"></span>
+      </a>
+    </p>
+
+
+
+    <div class="navbar-header pull-left">
+      <a class="navbar-brand thick" routerLink="user/:uid/website">
+        Websites
+      </a>
+    </div>
+
+    <!--plus-->
+    <p class="navbar-text pull-right">
+      <a routerLink="new ">
+        <span class="glyphicon glyphicon-plus navbar-white"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>
+
+<li class="list-group-item">
+<<<<<<< HEAD
+  <div class="row" *ngFor="let website of websites">
+    <a routerLink="/user/:uid/website/:wid/page " class="navbar-link">
+    <div class="col-xs-6 col-sm-3 color-blue">{{website.name}} </div>
+    </a>
+    <div class="col-xs-9">
+      <a routerLink="/user/:uid/website/:wid" class="pull-right">
+=======
+  <div class="row">
+    <a routerLink=":wid/page " class="navbar-link">
+    <div class="col-xs-6 col-sm-3 color-blue">Address Book </div>
+    </a>
+    <div class="col-xs-9">
+      <a routerLink=":wid" class="pull-right">
+        <span class="glyphicon glyphicon-cog"></span>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-xs-6 col-sm-3 color-blue ">Blogger</div>
+    <div class="col-xs-9">
+      <a routerLink=":wid" class="pull-right">
+        <span class="glyphicon glyphicon-cog"></span>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-xs-6 col-sm-3 color-blue">Blogging App</div>
+    <div class="col-xs-9">
+      <a routerLink=":wid" class="pull-right">
+        <span class="glyphicon glyphicon-cog"></span>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-xs-6 col-sm-3 color-blue">Scrip Testing App </div>
+    <div class="col-xs-9">
+      <a routerLink=":wid" class="pull-right">
+>>>>>>> ba13596921dff03c31674e9dea5932d7a0f517fb
+        <span class="glyphicon glyphicon-cog"></span>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+
+
+<!-- Footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom navbar-blue">
+  <div class="container-fluid">
+    <p class="navbar-text pull-right">
+      <a routerLink="/user/:uid">
+        <span class="glyphicon glyphicon-user navbar-white"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>
+</body>
+

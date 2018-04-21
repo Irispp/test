@@ -1,0 +1,142 @@
+
+
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    <!--chevron-left-->
+    <p class="navbar-text pull-left">
+
+      <a routerLink= "/user/:uid/website/:wid/page" class="pull-left navbar-text">
+
+      <a routerLink= "/user/:uid/website" class="navbar-link">
+
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+    </p>
+  </div>
+
+
+    <div class="navbar-header pull-left">
+      <a class="navbar-brand thick">
+        Widgets
+      </a>
+
+    </div>
+    <!--plus-->
+    <p class="navbar-text pull-right">
+      <a routerLink="/user/:uid/website/:wid/page/:pid/widget/new" class="pull-right navbar-text">
+
+    <!--plus-->
+    <p class="navbar-text pull-right">
+      <a routerLink="/user/:uid/website" class="navbar-link">
+        <span class="glyphicon glyphicon-plus"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>
+
+<div *ngFor="let widget of widgets">
+  <div [ngSwitch]="widget.widgetType">
+
+<div class="jga-widget" *ngSwitchCase="'HEADING'">
+        <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+        <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid/widget-header">
+          <span class="glyphicon glyphicon-cog pull-right"></span>
+        </a>
+        <h2>{{widget.text}}</h2>
+  </div>
+
+
+    <div class="jga-widget" *ngSwitchCase="'IMAGE'">
+      <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+          <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid/widget-image">
+            <span class="glyphicon glyphicon-cog pull-right"></span>
+            <img class="jpa-content" [src]="widget.url"/>
+          </a>
+    </div>
+
+    <div class="jga-widget" *ngSwitchCase="'HTML'">
+            <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+            <span class="glyphicon glyphicon-cog pull-right"></span>
+            {{widget.text}}
+    </div>
+
+    <div class="jga-widget" *ngSwitchCase="'YOUTUBE'">
+      <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+          <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">
+            <span class="glyphicon glyphicon-cog pull-right"></span></a>
+            <iframe width="600" height="400" [src]='sanitizer.bypassSecurityTrustResourceUrl(widget.url)' frameborder="0" allowfullscreen></iframe>
+    </div>
+
+<div class="jga-widget">
+  <div class="jga-toolbar">
+  </div>
+  <h2>GIZMODO</h2>
+
+</div>
+
+
+<div class="jga-widget">
+  <div class="jga-toolbar">
+    <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid/image">
+      <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+      <span class="glyphicon glyphicon-cog pull-right"></span>
+
+    </a>
+
+  <img class="jga-content" src="http://lorempixel.com/400/200"/>
+
+  <div class="jga-toolbar">
+    <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid/youtube">
+      <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+      <span class="glyphicon glyphicon-cog pull-right"></span>
+
+    </a>
+  <p>If you’ve heard of Knightscope’s security robots, it was probably due to&nbsp;their high-profile failures:&nbsp;one
+    would-be Robocop failed to detect a staircase and <a
+      href="https://www.nytimes.com/2017/07/18/technology/robot-cop-fountain.html?mcubz=0&amp;mtrref=undefined"
+      target="_blank" rel="noopener">killed itself by driving into a water fountain</a>, another <a
+      href="http://abc7news.com/news/parents-upset-after-stanford-mall-robot-injures-child/1423093/" target="_blank"
+      rel="noopener">ran over a toddler’s foot </a>in a shopping mall. On Wednesday, Knightscope&nbsp;<a
+      href="https://www.theverge.com/2017/9/20/16338064/robot-security-guard-knightscope-k7" target="_blank"
+      rel="noopener">announced two new potential fuckups</a>&nbsp;were joining the force: the K1 and the K5 buggy.
+  </p>
+</div>
+</div>
+
+<div class="jga-widget">
+  <div class="jga-toolbar">
+    <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid/header">
+      <span class="glyphicon glyphicon-cog"></span>
+      <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </a>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/7t2Lu4t6n4E" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<!-- Footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom light-brand">
+  <div class="container-fluid">
+    <div class="navbar-header width-100">
+      <a class="navbar-brand pull-left">
+        <span class="glyphicon glyphicon-play black-color"></span>
+      </a >
+      <a class="navbar-brand">
+        <span class="glyphicon glyphicon-eye-open black-color"></span>
+      </a >
+      <p class="navbar-text pull-right">
+        <a routerLink = "/user/:uid">
+          <span class="glyphicon glyphicon-user"></span>
+        </a>
+      </p >
+    </div>
+  </div>
+</nav>
+
+
+
+</div>
+</div>
+</body>

@@ -1,0 +1,125 @@
+
+<body style="height: 100%;">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    <!--chevron-left-->
+    <p class="navbar-text pull-left">
+      <a routerLink= "/user/:uid/website" class="navbar-link">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+    </p>
+
+
+
+    <div class="navbar-header pull-left">
+      <a class="navbar-brand thick" href = "widget-list.html">
+        Pages
+      </a>
+    </div>
+
+    <!--plus-->
+    <p class="navbar-text pull-right">
+      <a routerLink="/user/:uid/website/:wid/page/new" class="navbar-link">
+        <span class="glyphicon glyphicon-plus"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>
+
+<<<<<<< HEAD
+<div class="container-fluid" style="height: 100%;">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <div class="row" *ngFor="let page of pages">
+        <div class="col-xs-6"><a [routerLink]="['/user/:uid/website/:wid/page/:pid/widget']">{{page.name}}</a ></div>
+        <div class="col-xs-6">
+          <a [routerLink]="['/user/:uid/website/:wid/page/:pid']" class="pull-right">
+            <span class="glyphicon glyphicon-cog"></span>
+          </a >
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+=======
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-xs-6 col-sm-3 color-blue">Blog Post </div>
+    <div class="col-xs-9">
+      <a href="/user/:uid/website/:wid/page/:pid" class="pull-right">
+        <span class="glyphicon glyphicon-cog"></span>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-xs-6 col-sm-3 color-blue ">Blogs</div>
+    <div class="col-xs-9">
+      <a routerLink="/user/:uid/website/:wid/page/:pid" class="pull-right">
+        <span class="glyphicon glyphicon-cog"></span>
+      </a>
+    </div>
+  </div>
+</li>
+
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-xs-6 col-sm-3 color-blue">Home </div>
+    <div class="col-xs-9">
+      <a routerLink="/user/:uid/website/:wid/page/:pid" class="pull-right">
+        <span class="glyphicon glyphicon-cog"></span>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-xs-6 col-sm-3 color-blue">About </div>
+    <div class="col-xs-9">
+      <a routerLink="/user/:uid/website/:wid/page/:pid" class="pull-right">
+        <span class="glyphicon glyphicon-cog"></span>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-xs-6 col-sm-3 color-blue">Contact Us </div>
+    <div class="col-xs-9">
+      <a routerLink="/user/:uid/website/:wid/page/:pid" class="pull-right">
+        <a class="pull-right">
+          <span class="glyphicon glyphicon-cog"></span>
+        </a>
+      </a>
+    </div>
+  </div>
+
+</li>
+
+
+>>>>>>> ba13596921dff03c31674e9dea5932d7a0f517fb
+
+<!-- Footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <p class="navbar-text pull-right">
+      <a routerLink="/user/:uid ">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>
+</body>
+
